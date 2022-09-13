@@ -30,6 +30,13 @@ namespace poe
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<ApprDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DataConnection")));
+
+
+
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)

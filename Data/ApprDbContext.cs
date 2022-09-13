@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using poe.Models;
 
 namespace poe.Data
 {
@@ -8,5 +9,6 @@ namespace poe.Data
         {
 
         }
+        public DbSet<Student> Students { get; set; }
     }
 }
